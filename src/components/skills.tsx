@@ -1,6 +1,6 @@
 const skillsData = [
   {
-    name: "React.js",
+    name: "React",
     description: "Componentização e gerenciamento de estados",
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 64 64" fill="#00d8ff">
