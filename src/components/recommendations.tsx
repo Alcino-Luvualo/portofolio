@@ -12,19 +12,19 @@ interface Recommendation {
 const recommendations: Recommendation[] = [
   {
     id: "1",
-    name: "Maria Fernandes",
-    text: "Alcino é um desenvolvedor dedicado e criativo. Sempre entrega projetos de alta qualidade.",
+    name: "Victor Nanga",
+    text: "Um desenvolvedor dedicado e criativo. Sempre entrega projetos de qualidade.",
     timestamp: Date.now(),
   },
   {
     id: "2",
-    name: "João Pereira",
+    name: "Genesio Nkosi",
     text: "Excelente profissional, com grande capacidade de resolver problemas complexos de forma simples.",
     timestamp: Date.now(),
   },
   {
     id: "3",
-    name: "Carla Silva",
+    name: "Edlaine Da Silva",
     text: "Trabalhar com Alcino foi uma experiência incrível. Seu código é limpo e suas ideias inovadoras.",
     timestamp: Date.now(),
   },
