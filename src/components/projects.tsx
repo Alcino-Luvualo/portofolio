@@ -25,16 +25,7 @@ const projectsData = [
     imagem: "/burguerby.webp",
     deploy: "https://burguer-by.vercel.app/",
     github: "https://github.com/Alcino-Luvualo/restaurant-homepage",
-  },
-  {
-    title: "Mulheres",
-    description:
-      "Mini rede social para mulheres se ajudarem em termos de autoajuda, inspiração e crescimento.",
-    technologies: ["Javascript", "HTML", "CSS"],
-    imagem: "/mulheres.webp",
-    deploy: "https://mullheres.netlify.app/",
-    github: "https://github.com/Alcino-Luvualo/admin-page",
-  },
+  }
 ];
 
 export default function Projects() {
@@ -50,7 +41,7 @@ export default function Projects() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectsData.map((project, index) => (
             <div
               key={index}
@@ -62,7 +53,7 @@ export default function Projects() {
                 <img
                   src={project.imagem}
                   alt={project.title}
-                  className="w-full h-full object-contain max-w-full max-h-full group-hover:scale-105 transition-transform duration-300 relative z-10 rounded-xl"
+                  className="w-full h-full object-contain  group-hover:scale-105 transition-transform duration-300 relative z-10 rounded-xl"
                 />
               </div>
 
