@@ -132,9 +132,10 @@ export default function Hero() {
           <div className="fade-in flex justify-center">
             <div className="relative w-80 h-80 rounded-full border-4 border-primary/30 overflow-hidden bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center">
               <img
-                src="profissional.jpeg"
-                alt=""
-                className="relative w-80 h-80 rounded-full border-4 border-primary/30 overflow-hidden bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center"
+                src="professional.webp"
+                alt="Alcino Luvualo"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
