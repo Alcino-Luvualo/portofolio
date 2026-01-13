@@ -1,6 +1,9 @@
 import Typewriter from "typewriter-effect";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="about"
@@ -11,7 +14,7 @@ export default function Hero() {
           <div className="slide-up space-y-6">
             <div>
               <p className="text-primary font-poppins font-semibold text-sm mb-2">
-                BEM-VINDO
+                {t("hero.welcome")}
               </p>
               <h1 className="font-poppins font-bold text-5xl sm:text-6xl text-foreground mb-2">
                 <Typewriter
@@ -25,13 +28,11 @@ export default function Hero() {
                 />
               </h1>
               <h2 className="font-poppins font-bold text-3xl sm:text-4xl text-accent">
-                Software Developer
+                {t("hero.role")}
               </h2>
             </div>
             <p className="text-xl font-roboto text-muted-foreground leading-relaxed text-justify">
-              Desenvolvedor de software dedicado a projetar e implementar
-              soluções digitais escaláveis, combinando arquitetura sólida, alta
-              performance e impacto mensurável nos negócios.
+              {t("hero.description")}
             </p>
             <div className="flex gap-4 pt-6">
               <a
@@ -86,13 +87,13 @@ export default function Hero() {
                 href="#projects"
                 className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-poppins font-semibold hover:bg-primary/90 transition-colors"
               >
-                Ver Projetos
+                {t("hero.viewProjects")}
               </a>
               <a
                 href="#recommendations"
                 className="px-8 py-3 border border-primary text-primary rounded-lg font-poppins font-semibold hover:bg-primary/10 transition-colors"
               >
-                Recomendações
+                {t("hero.recommendations")}
               </a>
             </div>
           </div>

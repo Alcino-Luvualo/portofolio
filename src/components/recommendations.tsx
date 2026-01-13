@@ -1,3 +1,4 @@
+import { useLanguage } from "@/contexts/LanguageContext";
 
 //Depois Tenho Que Rever
 //import { useState } from "react"
@@ -5,7 +6,7 @@
 interface Recommendation {
   id: string
   name: string
-  text: string
+  textKey: string
   timestamp: number
 }
 
@@ -13,24 +14,25 @@ const recommendations: Recommendation[] = [
   {
     id: "1",
     name: "Victor Nanga",
-    text: "Um desenvolvedor dedicado e criativo. Sempre entrega projetos de qualidade.",
+    textKey: "recommendations.items.victor",
     timestamp: Date.now(),
   },
   {
     id: "2",
     name: "Genesio Nkosi",
-    text: "Excelente profissional, com grande capacidade de resolver problemas complexos de forma simples.",
+    textKey: "recommendations.items.genesio",
     timestamp: Date.now(),
   },
   {
     id: "3",
     name: "Edlaine Da Silva",
-    text: "Trabalhar com Alcino foi uma experiência incrível. Seu código é limpo e suas ideias inovadoras.",
+    textKey: "recommendations.items.edlaine",
     timestamp: Date.now(),
   },
 ]
 
 export default function Recommendations() {
+  const { t } = useLanguage();
   //Depois Tenho Que Rever
   //const [recommendations, setRecommendations] = useState<Recommendation[]>(initialRecommendations)
 
@@ -38,8 +40,8 @@ export default function Recommendations() {
     <section id="recommendations" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 slide-up">
-          <p className="text-primary font-poppins font-semibold text-sm mb-2">OPINIÕES</p>
-          <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">Recomendações</h2>
+          <p className="text-primary font-poppins font-semibold text-sm mb-2">{t("recommendations.title")}</p>
+          <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">{t("recommendations.subtitle")}</h2>
         </div>
 
         <div className="space-y-6 mb-12">
@@ -52,7 +54,7 @@ export default function Recommendations() {
               <div className="flex justify-between items-start mb-3">
                 <h3 className="font-poppins font-bold text-lg text-foreground">{rec.name}</h3>
               </div>
-              <p className="font-roboto text-muted-foreground leading-relaxed">{rec.text}</p>
+              <p className="font-roboto text-muted-foreground leading-relaxed">{t(rec.textKey)}</p>
             </div>
           ))}
         </div>
@@ -61,3 +63,5 @@ export default function Recommendations() {
     </section>
   )
 }
+
+

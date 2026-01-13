@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeaderProps {
   activeSection: string;
@@ -11,17 +12,22 @@ export default function Header({
   setActiveSection,
 }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { label: "Sobre Mim", id: "about", href: "#about" },
-    { label: "Habilidades", id: "skills", href: "#skills" },
-    { label: "Projetos", id: "projects", href: "#projects" },
-    { label: "Recomendações", id: "recommendations", href: "#recommendations" },
+    { label: t("nav.about"), id: "about", href: "#about" },
+    { label: t("nav.skills"), id: "skills", href: "#skills" },
+    { label: t("nav.projects"), id: "projects", href: "#projects" },
+    { label: t("nav.recommendations"), id: "recommendations", href: "#recommendations" },
   ];
 
   const handleNavClick = (id: string) => {
     setActiveSection(id);
     setIsMenuOpen(false);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "pt" : "en");
   };
 
   return (
@@ -44,30 +50,51 @@ export default function Header({
               key={item.id}
               href={item.href}
               onClick={() => handleNavClick(item.id)}
-              className={`text-sm font-medium transition-colors relative pb-1 ${
-                activeSection === item.id
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              } ${
-                activeSection === item.id ? "border-b-2 border-primary" : ""
-              }`}
+              className={`text-sm font-medium transition-colors relative pb-1 ${activeSection === item.id
+                ? "text-primary"
+                : "text-muted-foreground hover:text-foreground"
+                } ${activeSection === item.id ? "border-b-2 border-primary" : ""
+                }`}
             >
               {item.label}
             </a>
           ))}
+
+          {/* Language Toggle Button */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 group"
+            aria-label="Toggle Language"
+          >
+            <Globe size={18} className="text-muted-foreground group-hover:text-primary transition-colors" />
+            <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+              {language === "en" ? "🇵🇹 PT" : "🇺🇸 EN"}
+            </span>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden p-2 hover:bg-card rounded-lg transition-colors"
-        >
-          {isMenuOpen ? (
-            <X size={24} className="text-foreground" />
-          ) : (
-            <Menu size={24} className="text-foreground" />
-          )}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleLanguage}
+            className="p-2 hover:bg-card rounded-lg transition-colors"
+            aria-label="Toggle Language"
+          >
+            <span className="text-sm font-medium">
+              {language === "en" ? "🇵🇹" : "🇺🇸"}
+            </span>
+          </button>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 hover:bg-card rounded-lg transition-colors"
+          >
+            {isMenuOpen ? (
+              <X size={24} className="text-foreground" />
+            ) : (
+              <Menu size={24} className="text-foreground" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
@@ -79,11 +106,10 @@ export default function Header({
                 key={item.id}
                 href={item.href}
                 onClick={() => handleNavClick(item.id)}
-                className={`block px-4 py-2 rounded-lg transition-colors ${
-                  activeSection === item.id
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-border"
-                }`}
+                className={`block px-4 py-2 rounded-lg transition-colors ${activeSection === item.id
+                  ? "bg-primary text-primary-foreground"
+                  : "text-foreground hover:bg-border"
+                  }`}
               >
                 {item.label}
               </a>

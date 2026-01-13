@@ -1,3 +1,5 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const projectsData = [
   {
     title: "Tuuri",
@@ -29,15 +31,17 @@ const projectsData = [
 ];
 
 export default function Projects() {
+  const { t } = useLanguage();
+
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 slide-up">
           <p className="text-primary font-poppins font-semibold text-sm mb-2">
-            PORTFÓLIO
+            {t("projects.title")}
           </p>
           <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">
-            Projetos Destacados
+            {t("projects.subtitle")}
           </h2>
         </div>
 
@@ -83,7 +87,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex-1 px-4 py-2 text-center bg-primary text-primary-foreground text-sm font-poppins font-semibold rounded hover:bg-primary/90 transition-colors"
                   >
-                    Ver Projecto
+                    {t("projects.viewProject")}
                   </a>
                 </div>
               </div>
@@ -94,3 +98,4 @@ export default function Projects() {
     </section>
   );
 }
+

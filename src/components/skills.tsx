@@ -260,16 +260,25 @@ const skillsData = [
   },
 ];
 
+const skillKeys = [
+  "react", "nodejs", "python", "flask", "typescript", "javascript",
+  "tailwind", "html", "css", "vite", "bootstrap", "git"
+];
+
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Skills() {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 slide-up">
           <p className="text-primary font-poppins font-semibold text-sm mb-2">
-            COMPETÊNCIAS
+            {t("skills.title")}
           </p>
           <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">
-            Habilidades & Experiência
+            {t("skills.subtitle")}
           </h2>
         </div>
 
@@ -284,10 +293,10 @@ export default function Skills() {
                 {typeof skill.icon === "string" ? skill.icon : skill.icon}
               </div>
               <h3 className="font-poppins font-bold text-lg text-foreground mb-2">
-                {skill.name}
+                {t(`skills.items.${skillKeys[index]}.name`)}
               </h3>
               <p className="text-sm font-roboto text-muted-foreground">
-                {skill.description}
+                {t(`skills.items.${skillKeys[index]}.description`)}
               </p>
             </div>
           ))}
