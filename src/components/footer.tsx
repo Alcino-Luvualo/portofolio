@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-2">
           <p className="text-sm font-roboto text-gray-600">
-            {t("footer.madeWith")} ❤️ {t("footer.by")}{" "}
-            <span className="text-muted-foreground">Alcino Luvualo</span> using{" "}
-            <span className="text-muted-foreground/90">React</span> &{" "}
+            {t("footer.madeby")}{" "}
+            <span className="text-muted-foreground">Alcino Luvualo</span> {t('footer.using')}{" "}
+            <span className="text-muted-foreground/90">React</span> {t('footer.and')}{" "}
             <span className="text-muted-foreground/90">TailwindCSS</span>.
           </p>
           <p className="text-xs font-roboto text-gray-600">

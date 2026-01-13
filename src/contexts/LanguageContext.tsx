@@ -133,8 +133,9 @@ const translations = {
         },
         footer: {
             rights: "All rights reserved.",
-            madeWith: "Made with",
-            by: "by",
+            madeby: "Made by",
+            using: 'using',
+            and: '&'
         },
     },
     pt: {
@@ -223,8 +224,9 @@ const translations = {
         },
         footer: {
             rights: "Todos os direitos reservados.",
-            madeWith: "Feito com",
-            by: "por",
+            madeby: "Feito por",
+            using: 'usando',
+            and: 'e'
         },
     },
 };
