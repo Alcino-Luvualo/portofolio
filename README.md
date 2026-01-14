@@ -7,20 +7,6 @@ A modern and responsive portfolio developed with React and TypeScript, showcasin
 ![Vite](https://img.shields.io/badge/Vite-7.2.2-646CFF?logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.17-38B2AC?logo=tailwind-css&logoColor=white)
 
-## 📋 Table of Contents
-
-- [About the Project](#-about-the-project)
-- [Features](#-features)
-- [Technologies Used](#-technologies-used)
-- [Prerequisites](#-prerequisites)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [Available Scripts](#-available-scripts)
-- [Detailed Features](#-detailed-features)
-- [Author](#-author)
-- [License](#-license)
-
 ## 🎯 About the Project
 
 This is a personal portfolio developed to professionally showcase the projects, skills, and experience of Alcino Luvualo as a Software Developer. The site was built with a focus on performance, responsiveness, and a modern, intuitive user experience.
@@ -72,90 +58,6 @@ This is a personal portfolio developed to professionally showcase the projects, 
 - **ESLint** 9.39.1 - Linter for JavaScript/TypeScript
 - **TypeScript ESLint** 8.46.3 - ESLint rules specific to TypeScript
 
-## 📦 Prerequisites
-
-Before you begin, ensure you have installed:
-
-- **Node.js** (version 18 or higher)
-- **npm** or **yarn** or **pnpm**
-
-To check if you have Node.js installed:
-
-```bash
-node --version
-npm --version
-```
-
-## 🔧 Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/Alcino-Luvualo/portofolio.git
-```
-
-2. **Navigate to the project directory**
-
-```bash
-cd portofolio
-```
-
-3. **Install dependencies**
-
-```bash
-npm install
-```
-
-or
-
-```bash
-yarn install
-```
-
-or
-
-```bash
-pnpm install
-```
-
-## 🎮 Usage
-
-### Development Mode
-
-To start the development server:
-
-```bash
-npm run dev
-```
-
-The project will be available at `http://localhost:5173` (or another port if 5173 is occupied).
-
-### Production Build
-
-To create an optimized production build:
-
-```bash
-npm run build
-```
-
-The compiled files will be in the `dist/` folder.
-
-### Preview Build
-
-To preview the production build locally:
-
-```bash
-npm run preview
-```
-
-### Linting
-
-To check the code with ESLint:
-
-```bash
-npm run lint
-```
-
 ## 📁 Project Structure
 
 ```
@@ -188,15 +90,6 @@ portofolio/
 ├── tsconfig.node.json     # TypeScript config for Node
 └── vite.config.ts         # Vite configuration
 ```
-
-## 📜 Available Scripts
-
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Starts the development server |
-| `npm run build` | Creates a production build |
-| `npm run preview` | Previews the production build locally |
-| `npm run lint` | Runs ESLint to check the code |
 
 ## 🎨 Detailed Features
 
