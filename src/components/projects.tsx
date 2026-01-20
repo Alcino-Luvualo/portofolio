@@ -14,7 +14,7 @@ const projectsData = [
     title: "Bite Order",
     description:
       "Sistema web para pedidos online com interface intuitiva e responsiva.",
-    technologies: ["React", "CSS", "Javascript"],
+    technologies: ["React", "Typescript", "CSS"],
     imagem: "/bite-order.webp",
     deploy: "https://biteorder.netlify.app//",
     github: "https://github.com/Alcino-Luvualo/biteOrder",
