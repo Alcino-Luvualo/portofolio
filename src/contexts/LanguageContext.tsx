@@ -121,6 +121,11 @@ const translations = {
             subtitle: "Featured Projects",
             viewProject: "View Project",
             viewCode: "View Code",
+            description: {
+                tuuri: "Modern web development project with innovative technologies.",
+                biteOrder: "Online ordering system with intuitive and responsive interface.",
+                burgerBy: "Modern fast food restaurant website with menu, gallery and contact.",
+            },
         },
         recommendations: {
             title: "TESTIMONIALS",
@@ -212,6 +217,11 @@ const translations = {
             subtitle: "Projetos em Destaque",
             viewProject: "Ver Projeto",
             viewCode: "Ver Código",
+            description: {
+                tuuri: "Projeto de desenvolvimento web moderno com tecnologias inovadoras.",
+                biteOrder: "Sistema web para pedidos online com interface intuitiva e responsiva.",
+                burgerBy: "Site moderno de restaurante fast food com menu, galeria e contato.",
+            },
         },
         recommendations: {
             title: "TESTEMUNHOS",

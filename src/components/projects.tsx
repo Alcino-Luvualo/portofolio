@@ -1,37 +1,34 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const projectsData = [
-  {
-    title: "Tuuri",
-    description:
-      "Projeto de desenvolvimento web moderno com tecnologias inovadoras.",
-    technologies: ["React", "Javascript", "CSS"],
-    imagem: "/tuuri.webp",
-    deploy: "https://tuuri.vercel.app/",
-    github: "https://github.com/RivaldoMoz/Tuuri-1",
-  },
-  {
-    title: "Bite Order",
-    description:
-      "Sistema web para pedidos online com interface intuitiva e responsiva.",
-    technologies: ["React", "Typescript", "CSS"],
-    imagem: "/bite-order.webp",
-    deploy: "https://biteorder.netlify.app//",
-    github: "https://github.com/Alcino-Luvualo/biteOrder",
-  },
-  {
-    title: "Burger By",
-    description:
-      "Site moderno de restaurante fast food com menu, galeria e contato.",
-    technologies: ["React", "Typescript", "CSS"],
-    imagem: "/burguerby.webp",
-    deploy: "https://burguer-by.vercel.app/",
-    github: "https://github.com/Alcino-Luvualo/restaurant-homepage",
-  }
-];
-
 export default function Projects() {
   const { t } = useLanguage();
+
+  const projectsData = [
+    {
+      title: "Tuuri",
+      description: t("projects.description.tuuri"),
+      technologies: ["React", "Javascript", "CSS"],
+      imagem: "/tuuri.webp",
+      deploy: "https://tuuri.vercel.app/",
+      github: "https://github.com/RivaldoMoz/Tuuri-1",
+    },
+    {
+      title: "Bite Order",
+      description: t("projects.description.biteOrder"),
+      technologies: ["React", "Typescript", "CSS"],
+      imagem: "/bite-order.webp",
+      deploy: "https://biteorder.netlify.app//",
+      github: "https://github.com/Alcino-Luvualo/biteOrder",
+    },
+    {
+      title: "Burger By",
+      description: t("projects.description.burgerBy"),
+      technologies: ["React", "Typescript", "CSS"],
+      imagem: "/burguerby.webp",
+      deploy: "https://burguer-by.vercel.app/",
+      github: "https://github.com/Alcino-Luvualo/restaurant-homepage",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
