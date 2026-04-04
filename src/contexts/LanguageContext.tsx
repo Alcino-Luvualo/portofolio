@@ -51,8 +51,10 @@ const translations = {
         nav: {
             about: "About Me",
             skills: "Skills",
+            certifications: "Certifications",
             projects: "Projects",
-            recommendations: "Recommendations",
+            experience: "Experience",
+            contact: "Contact",
         },
         hero: {
             welcome: "WELCOME",
@@ -65,56 +67,18 @@ const translations = {
         skills: {
             title: "SKILLS",
             subtitle: "Skills & Experience",
-            items: {
-                react: {
-                    name: "React",
-                    description: "Componentization and state management",
-                },
-                nodejs: {
-                    name: "Node.js",
-                    description: "Backend with JavaScript runtime",
-                },
-                python: {
-                    name: "Python",
-                    description: "Automation, data analysis and backend",
-                },
-                flask: {
-                    name: "Flask",
-                    description: "Lightweight and flexible web microframework",
-                },
-                typescript: {
-                    name: "TypeScript",
-                    description: "Type-safe code with static typing",
-                },
-                javascript: {
-                    name: "JavaScript",
-                    description: "Dynamic functionality and interactivity",
-                },
-                tailwind: {
-                    name: "Tailwind CSS",
-                    description: "Fast and responsive styling with utility classes",
-                },
-                html: {
-                    name: "HTML5",
-                    description: "Semantic structuring of web pages",
-                },
-                css: {
-                    name: "CSS3",
-                    description: "Responsive design and modern animations",
-                },
-                vite: {
-                    name: "Vite",
-                    description: "Fast bundler for modern development",
-                },
-                bootstrap: {
-                    name: "Bootstrap",
-                    description: "Responsive layout and ready-made components",
-                },
-                git: {
-                    name: "Git & GitHub",
-                    description: "Version control and collaboration",
-                },
-            },
+            description: "Tools and technologies I use to build projects.",
+        },
+        certifications: {
+            title: "CERTIFICATIONS",
+            subtitle: "Certifications & Badges",
+            description: "Professional badges from IBM and Boot.dev.",
+            filterAll: "All",
+            filterIBM: "IBM",
+            filterBootdev: "Boot.dev",
+            viewCredential: "View Credential",
+            showLess: "Show less",
+            more: "more",
         },
         projects: {
             title: "PORTFOLIO",
@@ -136,6 +100,24 @@ const translations = {
                 edlaine: "Working with Alcino was an incredible experience. His code is clean and his ideas innovative.",
             },
         },
+        experience: {
+            title: "EXPERIENCE",
+            subtitle: "Professional Journey",
+            itgest: {
+                description: "At ITGEST, I work as a Full Stack Developer, building and maintaining scalable web applications used by thousands of people every month, including critical systems for major telecommunications clients such as Angola Telecom and Movicel. I develop modern front-end interfaces using Angular and robust back-end systems using AdonisJS, supported by MySQL databases. I am responsible for designing and implementing RESTful APIs, optimizing application performance, and ensuring clean, maintainable code. I also work in an Agile environment, collaborating with cross-functional teams to deliver reliable, high-performance, and user-centric solutions.",
+            },
+            ars: {
+                description: "I worked on the development of the Tuuri platform as a Front-End Developer, where I had the opportunity to deepen my knowledge of React.js, JavaScript (ES6+), Hooks, Context API, and Styled Components. During this period, I honed my UI/UX skills by developing responsive, intuitive, and accessible (WCAG) interfaces, as well as learning best practices in architecture for scalable systems. I also used Git/GitHub for code versioning and team collaboration, always focusing on performance, scalability, and delivering solutions that enhance the user experience.",
+            },
+            gisetech: {
+                description: "During my internship, I had the opportunity to enhance my knowledge of HTML, CSS, JavaScript, Git, and GitHub, applying them to practical and collaborative projects. In addition, I immersed myself in the world of computer networks, learning how they work and how to manage their infrastructure efficiently. This experience allowed me to integrate web development skills with an understanding of network infrastructure, strengthening my ability to create comprehensive and functional solutions.",
+            },
+        },
+        contact: {
+            title: "GET IN TOUCH",
+            subtitle: "Let's Work Together",
+            description: "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+        },
         footer: {
             rights: "All rights reserved.",
             madeby: "Made by",
@@ -147,8 +129,10 @@ const translations = {
         nav: {
             about: "Sobre Mim",
             skills: "Habilidades",
+            certifications: "Certificações",
             projects: "Projetos",
-            recommendations: "Recomendações",
+            experience: "Experiência",
+            contact: "Contato",
         },
         hero: {
             welcome: "BEM-VINDO",
@@ -161,56 +145,18 @@ const translations = {
         skills: {
             title: "COMPETÊNCIAS",
             subtitle: "Habilidades & Experiência",
-            items: {
-                react: {
-                    name: "React",
-                    description: "Componentização e gerenciamento de estados",
-                },
-                nodejs: {
-                    name: "Node.js",
-                    description: "Backend com runtime JavaScript",
-                },
-                python: {
-                    name: "Python",
-                    description: "Automação, análise de dados e backend",
-                },
-                flask: {
-                    name: "Flask",
-                    description: "Microframework web leve e flexível",
-                },
-                typescript: {
-                    name: "TypeScript",
-                    description: "Código seguro com tipagem estática",
-                },
-                javascript: {
-                    name: "JavaScript",
-                    description: "Funcionalidades dinâmicas e interatividade",
-                },
-                tailwind: {
-                    name: "Tailwind CSS",
-                    description: "Estilização rápida e responsiva com classes utilitárias",
-                },
-                html: {
-                    name: "HTML5",
-                    description: "Estruturação semântica de páginas web",
-                },
-                css: {
-                    name: "CSS3",
-                    description: "Design responsivo e animações modernas",
-                },
-                vite: {
-                    name: "Vite",
-                    description: "Bundler rápido para desenvolvimento moderno",
-                },
-                bootstrap: {
-                    name: "Bootstrap",
-                    description: "Layout responsivo e componentes prontos",
-                },
-                git: {
-                    name: "Git & GitHub",
-                    description: "Controle de versão e colaboração",
-                },
-            },
+            description: "Ferramentas e tecnologias que uso para construir projetos.",
+        },
+        certifications: {
+            title: "CERTIFICAÇÕES",
+            subtitle: "Certificações & Badges",
+            description: "Credenciais profissionais da IBM e Boot.dev.",
+            filterAll: "Todas",
+            filterIBM: "IBM",
+            filterBootdev: "Boot.dev",
+            viewCredential: "Ver Credencial",
+            showLess: "Ver menos",
+            more: "mais",
         },
         projects: {
             title: "PORTFÓLIO",
@@ -231,6 +177,24 @@ const translations = {
                 genesio: "Excelente profissional, com grande capacidade de resolver problemas complexos de forma simples.",
                 edlaine: "Trabalhar com Alcino foi uma experiência incrível. Seu código é limpo e suas ideias inovadoras.",
             },
+        },
+        experience: {
+            title: "EXPERIÊNCIA",
+            subtitle: "Jornada Profissional",
+            itgest: {
+                description: "Na ITGEST, trabalho como Desenvolvedor Full Stack, construindo e mantendo aplicações web escaláveis usadas por milhares de pessoas mensalmente, incluindo sistemas críticos para grandes clientes de telecomunicações como Angola Telecom e Movicel. Desenvolvo interfaces front-end modernas usando Angular e sistemas back-end robustos usando AdonisJS, suportados por bases de dados MySQL. Sou responsável por projetar e implementar APIs RESTful, otimizar o desempenho das aplicações e garantir código limpo e manutenível. Também trabalho em ambiente Ágil, colaborando com equipas multifuncionais para entregar soluções confiáveis, de alto desempenho e centradas no utilizador.",
+            },
+            ars: {
+                description: "Trabalhei no desenvolvimento da plataforma Tuuri como Desenvolvedor Front-End, onde tive a oportunidade de aprofundar meus conhecimentos em React.js, JavaScript (ES6+), Hooks, Context API e Styled Components. Durante este período, aprimorei minhas habilidades de UI/UX desenvolvendo interfaces responsivas, intuitivas e acessíveis (WCAG), além de aprender as melhores práticas em arquitetura para sistemas escaláveis. Também usei Git/GitHub para versionamento de código e colaboração em equipa, sempre focando em desempenho, escalabilidade e entrega de soluções que melhoram a experiência do utilizador.",
+            },
+            gisetech: {
+                description: "Durante meu estágio, tive a oportunidade de aprimorar meus conhecimentos em HTML, CSS, JavaScript, Git e GitHub, aplicando-os em projetos práticos e colaborativos. Além disso, mergulhei no mundo das redes de computadores, aprendendo como funcionam e como gerir sua infraestrutura de forma eficiente. Esta experiência permitiu-me integrar habilidades de desenvolvimento web com compreensão de infraestrutura de rede, fortalecendo minha capacidade de criar soluções abrangentes e funcionais.",
+            },
+        },
+        contact: {
+            title: "ENTRE EM CONTATO",
+            subtitle: "Vamos Trabalhar Juntos",
+            description: "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades para fazer parte das suas visões.",
         },
         footer: {
             rights: "Todos os direitos reservados.",
