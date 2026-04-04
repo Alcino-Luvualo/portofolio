@@ -1,5 +1,7 @@
 import type { ReactElement } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ScrollReveal from "@/components/motion/ScrollReveal";
+
 const iconUrl = (slug: string, color: string) =>
   `https://cdn.simpleicons.org/${slug}/${color}`;
 
@@ -172,34 +174,29 @@ export default function Skills() {
       className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0a0a] text-white"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="mb-12 slide-up text-center">
+        <ScrollReveal className="mb-12 text-center">
           <p className="text-primary font-poppins font-semibold text-sm mb-3">
             {t("skills.title")}
           </p>
           <h2 className="font-poppins font-bold text-4xl sm:text-5xl mb-4 text-foreground">
             {t("skills.subtitle")}
           </h2>
-        </div>
+        </ScrollReveal>
 
-        <div className="slide-up" style={{ animationDelay: "100ms" }}>
-          <div className="space-y-8">
-            {techRows.map((row, rowIndex) => (
-              <div
-                key={row.label}
-                className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 border-b border-white/5 pb-8 last:border-b-0 last:pb-0"
-                style={{ animationDelay: `${150 + rowIndex * 60}ms` }}
-              >
+        <div className="space-y-8">
+          {techRows.map((row, rowIndex) => (
+            <ScrollReveal key={row.label} delayMs={rowIndex * 60}>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 border-b border-white/5 pb-8 last:border-b-0 last:pb-0">
                 <div className="sm:w-[180px] shrink-0">
                   <p className="font-poppins text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     {row.label}
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  {row.items.map((tech, i) => (
+                  {row.items.map((tech) => (
                     <span
                       key={tech.name}
-                      className="px-4 py-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full text-white font-roboto text-sm hover:border-[#3a3a3a] hover:bg-[#222] transition-all duration-300 cursor-pointer flex items-center gap-2"
-                      style={{ animationDelay: `${200 + i * 25}ms` }}
+                      className="flex cursor-default items-center gap-2 rounded-full border border-[#2a2a2a] bg-[#1a1a1a] px-4 py-2 font-roboto text-sm text-white transition-all duration-300 hover:translate-y-[-2px] hover:border-primary/40 hover:bg-[#222] hover:shadow-md hover:shadow-primary/10"
                     >
                       {"customIcon" in tech && tech.customIcon ? (
                         <tech.customIcon />
@@ -207,7 +204,7 @@ export default function Skills() {
                         <img
                           src={iconUrl(tech.slug, tech.color ?? "FFFFFF")}
                           alt=""
-                          className="w-5 h-5"
+                          className="h-5 w-5"
                           loading="lazy"
                         />
                       ) : null}
@@ -216,8 +213,8 @@ export default function Skills() {
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
