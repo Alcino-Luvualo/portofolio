@@ -2,7 +2,19 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const iconUrl = (slug: string, color: string) =>
   `https://cdn.simpleicons.org/${slug}/${color}`;
 
-const techRows = [
+type TechItem = {
+  name: string;
+  slug?: string;
+  color?: string;
+  customIcon?: () => JSX.Element;
+};
+
+type TechRow = {
+  label: string;
+  items: TechItem[];
+};
+
+const techRows: TechRow[] = [
   {
     label: "FRONT-END",
     items: [
@@ -188,9 +200,9 @@ export default function Skills() {
                       className="px-4 py-2 bg-[#1a1a1a] border border-[#2a2a2a] rounded-full text-white font-roboto text-sm hover:border-[#3a3a3a] hover:bg-[#222] transition-all duration-300 cursor-pointer flex items-center gap-2"
                       style={{ animationDelay: `${200 + i * 25}ms` }}
                     >
-                      {tech.customIcon ? (
+                      {"customIcon" in tech && tech.customIcon ? (
                         <tech.customIcon />
-                      ) : tech.slug ? (
+                      ) : "slug" in tech && tech.slug ? (
                         <img
                           src={iconUrl(tech.slug, tech.color ?? "FFFFFF")}
                           alt=""
