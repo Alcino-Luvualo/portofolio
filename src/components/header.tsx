@@ -17,8 +17,10 @@ export default function Header({
   const navItems = [
     { label: t("nav.about"), id: "about", href: "#about" },
     { label: t("nav.skills"), id: "skills", href: "#skills" },
+    { label: t("nav.certifications"), id: "certifications", href: "#certifications" },
     { label: t("nav.projects"), id: "projects", href: "#projects" },
-    { label: t("nav.recommendations"), id: "recommendations", href: "#recommendations" },
+    { label: t("nav.experience"), id: "experience", href: "#experience" },
+    { label: t("nav.contact"), id: "contact", href: "#contact" },
   ];
 
   const handleNavClick = (id: string) => {
