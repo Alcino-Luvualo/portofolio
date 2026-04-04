@@ -1,3 +1,4 @@
+import type { ReactElement } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 const iconUrl = (slug: string, color: string) =>
   `https://cdn.simpleicons.org/${slug}/${color}`;
@@ -6,7 +7,7 @@ type TechItem = {
   name: string;
   slug?: string;
   color?: string;
-  customIcon?: () => JSX.Element;
+  customIcon?: () => ReactElement;
 };
 
 type TechRow = {
