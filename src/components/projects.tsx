@@ -5,28 +5,25 @@ export default function Projects() {
 
   const projectsData = [
     {
-      title: "Tuuri",
-      description: t("projects.description.tuuri"),
-      technologies: ["React", "Javascript", "CSS"],
-      imagem: "/tuuri.webp",
-      deploy: "https://tuuri.vercel.app/",
-      github: "https://github.com/RivaldoMoz/Tuuri-1",
+      title: "HelpDesk Backend",
+      description:
+        "RESTful API for a help desk ticketing platform with role-based access control for Administrators, Technicians, and Clients.",
+      link: "https://github.com/Alcino-Luvualo/HelpDesk-Backend",
+      logo: "/projects/helpdesk.png",
     },
     {
-      title: "Bite Order",
-      description: t("projects.description.biteOrder"),
-      technologies: ["React", "Typescript", "CSS"],
-      imagem: "/bite-order.webp",
-      deploy: "https://biteorder.netlify.app//",
-      github: "https://github.com/Alcino-Luvualo/biteOrder",
+      title: "Alquimia",
+      description:
+        "Official website for Restaurante Alquimia, a fine-dining restaurant located in the heart of Baixa de Luanda, Angola. The site presents the restaurant's identity, menu, services, gallery, and reservation flow in a polished, single-page experience.",
+      link: "https://u-topico.vercel.app/",
+      logo: "/projects/alquimia.ico",
     },
     {
-      title: "Burger By",
-      description: t("projects.description.burgerBy"),
-      technologies: ["React", "Typescript", "CSS"],
-      imagem: "/burguerby.webp",
-      deploy: "https://burguer-by.vercel.app/",
-      github: "https://github.com/Alcino-Luvualo/restaurant-homepage",
+      title: "BiteOrder",
+      description:
+        "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
+      link: "https://biteorder.netlify.app/",
+      logo: "/projects/biteorder.svg",
     },
   ];
 
@@ -46,45 +43,38 @@ export default function Projects() {
           {projectsData.map((project, index) => (
             <div
               key={index}
-              className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 slide-up"
-              style={{ animationDelay: `${index * 50}ms` }}
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card/70 p-6 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 slide-up"
+              style={{ animationDelay: `${index * 60}ms` }}
             >
-              <div className="h-64 bg-linear-to-br from-primary/10 via-card to-accent/10 group-hover:from-primary/15 group-hover:to-accent/15 transition-all duration-300 flex items-center justify-center p-6 overflow-hidden relative">
-                <div className="absolute inset-0 bg-background/5"></div>
-                <img
-                  src={project.imagem}
-                  alt={project.title}
-                  className="w-full h-full object-contain  group-hover:scale-105 transition-transform duration-300 relative z-10 rounded-xl"
-                />
-              </div>
-
-              <div className="p-6">
-                <h3 className="font-poppins font-bold text-xl text-foreground mb-2">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="relative">
+                {project.logo ? (
+                  <div className="mb-5 flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-2xl bg-background/70 grid place-items-center">
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="h-7 w-7 object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                ) : null}
+                <h3 className="font-poppins font-bold text-2xl text-foreground mb-3">
                   {project.title}
                 </h3>
-                <p className="text-sm font-roboto text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm font-roboto text-muted-foreground mb-8 leading-relaxed line-clamp-2">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
                 <div className="flex gap-3">
                   <a
-                    href={project.deploy}
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 px-4 py-2 text-center bg-primary text-primary-foreground text-sm font-poppins font-semibold rounded hover:bg-primary/90 transition-colors"
+                    className="flex-1 px-4 py-2 text-center bg-primary text-primary-foreground text-sm font-poppins font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                   >
-                    {t("projects.viewProject")}
+                    Preview
                   </a>
                 </div>
               </div>
@@ -95,4 +85,3 @@ export default function Projects() {
     </section>
   );
 }
-
