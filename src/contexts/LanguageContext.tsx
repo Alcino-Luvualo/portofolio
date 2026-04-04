@@ -85,10 +85,13 @@ const translations = {
             subtitle: "Featured Projects",
             viewProject: "View Project",
             viewCode: "View Code",
-            description: {
-                tuuri: "Modern web development project with innovative technologies.",
-                biteOrder: "Online ordering system with intuitive and responsive interface.",
-                burgerBy: "Modern fast food restaurant website with menu, gallery and contact.",
+            items: {
+                helpdesk:
+                    "RESTful API for a help desk ticketing platform with role-based access control for Administrators, Technicians, and Clients.",
+                alquimia:
+                    "Official website for Restaurante Alquimia, a fine-dining restaurant in the heart of Baixa de Luanda, Angola. The site presents the restaurant's identity, menu, services, gallery, and reservation flow in a polished single-page experience.",
+                biteorder:
+                    "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
             },
         },
         recommendations: {
@@ -163,10 +166,13 @@ const translations = {
             subtitle: "Projetos em Destaque",
             viewProject: "Ver Projeto",
             viewCode: "Ver Código",
-            description: {
-                tuuri: "Projeto de desenvolvimento web moderno com tecnologias inovadoras.",
-                biteOrder: "Sistema web para pedidos online com interface intuitiva e responsiva.",
-                burgerBy: "Site moderno de restaurante fast food com menu, galeria e contato.",
+            items: {
+                helpdesk:
+                    "API RESTful para uma plataforma de help desk com controle de acesso por papéis para Administradores, Técnicos e Clientes.",
+                alquimia:
+                    "Website oficial do Restaurante Alquimia, um fine-dining no coração da Baixa de Luanda, Angola. O site apresenta identidade, menu, serviços, galeria e fluxo de reservas em uma experiência de página única.",
+                biteorder:
+                    "Website responsivo de pedidos online com destaques de menu, navegação fluida e checkout simples.",
             },
         },
         recommendations: {
