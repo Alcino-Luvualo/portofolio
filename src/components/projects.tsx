@@ -6,22 +6,19 @@ export default function Projects() {
   const projectsData = [
     {
       title: "HelpDesk Backend",
-      description:
-        "RESTful API for a help desk ticketing platform with role-based access control for Administrators, Technicians, and Clients.",
+      description: t("projects.items.helpdesk"),
       link: "https://github.com/Alcino-Luvualo/HelpDesk-Backend",
       logo: "/projects/helpdesk.png",
     },
     {
       title: "Alquimia",
-      description:
-        "Official website for Restaurante Alquimia, a fine-dining restaurant located in the heart of Baixa de Luanda, Angola. The site presents the restaurant's identity, menu, services, gallery, and reservation flow in a polished, single-page experience.",
+      description: t("projects.items.alquimia"),
       link: "https://u-topico.vercel.app/",
       logo: "/projects/alquimia.ico",
     },
     {
       title: "BiteOrder",
-      description:
-        "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
+      description: t("projects.items.biteorder"),
       link: "https://biteorder.netlify.app/",
       logo: "/projects/biteorder.svg",
     },
@@ -74,7 +71,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex-1 px-4 py-2 text-center bg-primary text-primary-foreground text-sm font-poppins font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                   >
-                    Preview
+                    {t("projects.viewProject")}
                   </a>
                 </div>
               </div>
