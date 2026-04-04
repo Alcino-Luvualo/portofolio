@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Briefcase, Calendar } from "lucide-react";
+import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const EXPERIENCES = [
   {
@@ -71,11 +72,12 @@ export default function Experience() {
       raf = requestAnimationFrame(updateTimeline);
     };
 
-    updateTimeline();
+    const initial = requestAnimationFrame(() => updateTimeline());
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
 
     return () => {
+      cancelAnimationFrame(initial);
       cancelAnimationFrame(raf);
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
@@ -85,14 +87,14 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16 slide-up">
+        <ScrollReveal className="mb-16 text-center">
           <p className="text-primary font-poppins font-semibold text-sm mb-2">
             {t("experience.title")}
           </p>
           <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">
             {t("experience.subtitle")}
           </h2>
-        </div>
+        </ScrollReveal>
 
         <div ref={timelineRef} className="relative">
           <div
