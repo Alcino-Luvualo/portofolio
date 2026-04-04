@@ -1,0 +1,241 @@
+.certifications-section {
+  padding: 5rem 1rem;
+  background: color-mix(in oklch, var(--background) 75%, var(--card) 25%);
+  color: var(--foreground);
+}
+
+@media (min-width: 640px) {
+  .certifications-section {
+    padding: 5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .certifications-section {
+    padding: 6rem 2rem;
+  }
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certifications-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.certifications-kicker {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.75rem;
+}
+
+.certifications-title {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  color: var(--foreground);
+}
+
+.certifications-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.filter-chip {
+  border: 1px solid color-mix(in oklch, var(--border) 80%, transparent);
+  background: transparent;
+  color: var(--muted-foreground);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-chip:hover,
+.filter-chip:focus-visible {
+  color: var(--foreground);
+  border-color: color-mix(in oklch, var(--primary) 55%, transparent);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.filter-chip.is-active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .certifications-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@keyframes cert-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cert-card {
+  background: color-mix(in oklch, var(--card) 90%, var(--background) 10%);
+  border: 1px solid color-mix(in oklch, var(--border) 70%, transparent);
+  border-radius: calc(var(--radius) + 0.6rem);
+  padding: 1.75rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 100%;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: cert-card-in 0.6s ease forwards;
+}
+
+.cert-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    color-mix(in oklch, var(--primary) 25%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in oklch, var(--primary) 35%, transparent);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.35),
+    0 0 28px rgba(111, 65, 255, 0.18);
+}
+
+.cert-card:hover::after {
+  opacity: 1;
+}
+
+.cert-card__logo {
+  width: 120px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cert-card__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cert-card__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.cert-card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chip {
+  background: color-mix(in oklch, var(--muted) 70%, transparent);
+  color: var(--muted-foreground);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  border: 1px solid color-mix(in oklch, var(--border) 55%, transparent);
+}
+
+.skill-chip--action {
+  background: transparent;
+  cursor: pointer;
+  color: var(--primary);
+  border-color: color-mix(in oklch, var(--primary) 35%, transparent);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.skill-chip--action:hover,
+.skill-chip--action:focus-visible {
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.cert-card__link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-foreground);
+  background: var(--primary);
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.cert-card__link:hover,
+.cert-card__link:focus-visible {
+  background: color-mix(in oklch, var(--primary) 90%, white 10%);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-card {
+    animation: none;
+    opacity: 1;
+  }
+
+  .cert-card,
+  .filter-chip,
+  .cert-card__link,
+  .skill-chip--action {
+    transition: none;
+  }
+}
