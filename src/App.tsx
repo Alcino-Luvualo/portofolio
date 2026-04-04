@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { useScrollSpySection } from "@/hooks/useScrollSpySection";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Skills from "@/components/skills";
@@ -11,6 +12,7 @@ import Footer from "@/components/footer";
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
+  useScrollSpySection(setActiveSection);
 
   return (
     <LanguageProvider>
