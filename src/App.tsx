@@ -3,8 +3,10 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Skills from "@/components/skills";
+import CertificationsSection from "@/components/Certifications/CertificationsSection";
 import Projects from "@/components/projects";
-import Recommendations from "@/components/recommendations";
+import Experience from "@/components/experience";
+import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
 function App() {
@@ -19,8 +21,10 @@ function App() {
         />
         <Hero />
         <Skills />
+        <CertificationsSection />
         <Projects />
-        <Recommendations />
+        <Experience />
+        <Contact />
         <Footer />
       </main>
     </LanguageProvider>
