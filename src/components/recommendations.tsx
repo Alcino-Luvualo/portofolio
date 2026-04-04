@@ -1,13 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-
-//Depois Tenho Que Rever
-//import { useState } from "react"
+import ScrollReveal from "@/components/motion/ScrollReveal";
 
 interface Recommendation {
-  id: string
-  name: string
-  textKey: string
-  timestamp: number
+  id: string;
+  name: string;
+  textKey: string;
+  timestamp: number;
 }
 
 const recommendations: Recommendation[] = [
@@ -29,39 +27,40 @@ const recommendations: Recommendation[] = [
     textKey: "recommendations.items.edlaine",
     timestamp: Date.now(),
   },
-]
+];
 
 export default function Recommendations() {
   const { t } = useLanguage();
-  //Depois Tenho Que Rever
-  //const [recommendations, setRecommendations] = useState<Recommendation[]>(initialRecommendations)
 
   return (
     <section id="recommendations" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16 slide-up">
-          <p className="text-primary font-poppins font-semibold text-sm mb-2">{t("recommendations.title")}</p>
-          <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">{t("recommendations.subtitle")}</h2>
-        </div>
+        <ScrollReveal className="mb-16 text-center">
+          <p className="text-primary font-poppins font-semibold text-sm mb-2">
+            {t("recommendations.title")}
+          </p>
+          <h2 className="font-poppins font-bold text-4xl sm:text-5xl text-foreground">
+            {t("recommendations.subtitle")}
+          </h2>
+        </ScrollReveal>
 
-        <div className="space-y-6 mb-12">
+        <div className="mb-12 space-y-6">
           {recommendations.map((rec, index) => (
-            <div
-              key={rec.id}
-              className="p-6 bg-card border border-border rounded-lg hover:border-primary/50 transition-all duration-300 slide-up relative group"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <div className="flex justify-between items-start mb-3">
-                <h3 className="font-poppins font-bold text-lg text-foreground">{rec.name}</h3>
+            <ScrollReveal key={rec.id} delayMs={index * 70}>
+              <div className="group relative rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+                <div className="mb-3 flex items-start justify-between">
+                  <h3 className="font-poppins text-lg font-bold text-foreground transition-colors group-hover:text-primary/90">
+                    {rec.name}
+                  </h3>
+                </div>
+                <p className="font-roboto leading-relaxed text-muted-foreground">
+                  {t(rec.textKey)}
+                </p>
               </div>
-              <p className="font-roboto text-muted-foreground leading-relaxed">{t(rec.textKey)}</p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
-
       </div>
     </section>
-  )
+  );
 }
-
-
