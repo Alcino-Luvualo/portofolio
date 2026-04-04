@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ScrollReveal from "@/components/motion/ScrollReveal";
 import {
   certificationFilters,
   certifications,
@@ -99,7 +100,7 @@ export default function CertificationsSection() {
 
   useEffect(() => {
     if (activeFilter !== "all") {
-      setShowAllMobile(false);
+      queueMicrotask(() => setShowAllMobile(false));
     }
   }, [activeFilter]);
 
@@ -112,7 +113,8 @@ export default function CertificationsSection() {
 
   return (
     <section id="certifications" className="certifications-section">
-      <div className="certifications-container">
+      <ScrollReveal>
+        <div className="certifications-container">
         <header className="certifications-header">
           <p className="certifications-kicker">{t("certifications.title")}</p>
           <h2 className="certifications-title">{t("certifications.subtitle")}</h2>
@@ -201,7 +203,8 @@ export default function CertificationsSection() {
             );
           })}
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }
