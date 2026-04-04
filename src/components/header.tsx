@@ -151,14 +151,14 @@ export default function Header({
           isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="h-full w-full bg-background/70 backdrop-blur-2xl">
-          <div className="relative h-full w-full flex flex-col items-center justify-center gap-6">
+        <div className="h-full w-full bg-[#0b0b10]/95 backdrop-blur-2xl">
+          <div className="relative h-full w-full flex flex-col items-center justify-center gap-8 px-6 pt-20 pb-24">
             {navItems.map((item, index) => (
               <a
                 key={item.id}
                 href={item.href}
                 onClick={() => handleNavClick(item.id)}
-                className="text-2xl font-poppins font-semibold text-foreground transition-colors hover:text-primary"
+                className="text-2xl font-poppins font-semibold tracking-wide text-foreground transition-colors hover:text-primary"
                 style={{
                   transitionDelay: `${index * 50}ms`,
                   transitionProperty: "opacity, transform",
@@ -172,7 +172,7 @@ export default function Header({
             ))}
 
             <div
-              className="absolute bottom-10 flex items-center gap-5 rounded-full border border-white/10 bg-white/10 px-6 py-3 backdrop-blur-xl"
+              className="absolute bottom-10 flex items-center gap-5 rounded-full border border-white/15 bg-white/10 px-6 py-3 backdrop-blur-xl"
               style={{
                 transitionDelay: `${navItems.length * 50 + 100}ms`,
                 transitionProperty: "opacity, transform",
