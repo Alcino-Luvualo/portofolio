@@ -100,22 +100,29 @@ export default function Header({
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.id}
-              href={item.href}
-              onClick={() => handleNavClick(item.id)}
-              className={`text-sm font-medium transition-colors relative pb-1 ${
-                activeSection === item.id
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              } ${
-                activeSection === item.id ? "border-b-2 border-primary" : ""
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const active = activeSection === item.id;
+            return (
+              <a
+                key={item.id}
+                href={item.href}
+                onClick={() => handleNavClick(item.id)}
+                className={`group relative pb-1 text-sm font-medium transition-colors ${
+                  active
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <span className="relative z-10">{item.label}</span>
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 w-full origin-left rounded-full bg-primary transition-transform duration-300 ease-out ${
+                    active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                  aria-hidden
+                />
+              </a>
+            );
+          })}
 
           <button
             onClick={toggleLanguage}

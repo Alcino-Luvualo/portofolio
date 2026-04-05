@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+/* eslint-disable react-refresh/only-export-components -- useLanguage is intentionally exported with provider */
+import { createContext, useCallback, useContext, useState } from "react";
 import type { ReactNode } from "react";
 
 type Language = "en" | "pt";
@@ -7,6 +8,7 @@ interface LanguageContextType {
     language: Language;
     setLanguage: (lang: Language) => void;
     t: (key: string) => string;
+    languageTransition: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -26,21 +28,46 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
-    const [language, setLanguage] = useState<Language>("en");
+    const [language, setLanguageState] = useState<Language>("en");
+    const [languageTransition, setLanguageTransition] = useState(false);
+
+    const setLanguage = useCallback((lang: Language) => {
+        if (lang === language) return;
+        if (
+            typeof window !== "undefined" &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+            setLanguageState(lang);
+            return;
+        }
+        setLanguageTransition(true);
+        window.setTimeout(() => {
+            setLanguageState(lang);
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => setLanguageTransition(false));
+            });
+        }, 180);
+    }, [language]);
 
     const t = (key: string): string => {
-        const keys = key.split(".");
-        let value: any = translations[language];
+        const parts = key.split(".");
+        let cur: unknown = translations[language];
 
-        for (const k of keys) {
-            value = value?.[k];
+        for (const k of parts) {
+            if (cur !== null && typeof cur === "object" && k in cur) {
+                cur = (cur as Record<string, unknown>)[k];
+            } else {
+                return key;
+            }
         }
 
-        return value || key;
+        return typeof cur === "string" ? cur : key;
     };
 
     return (
-        <LanguageContext.Provider value={{ language, setLanguage, t }}>
+        <LanguageContext.Provider
+            value={{ language, setLanguage, t, languageTransition }}
+        >
             {children}
         </LanguageContext.Provider>
     );
@@ -62,7 +89,8 @@ const translations = {
             description:
                 "Software developer dedicated to designing and implementing scalable digital solutions, combining solid architecture, high performance, and measurable business impact.",
             viewProjects: "Projects",
-            recommendations: "Recommendations",
+            statProjects: "Featured projects",
+            statStack: "Stack & tools",
         },
         skills: {
             title: "SKILLS",
@@ -92,15 +120,6 @@ const translations = {
                     "Official website for Restaurante Alquimia, a fine-dining restaurant in the heart of Baixa de Luanda, Angola. The site presents the restaurant's identity, menu, services, gallery, and reservation flow in a polished single-page experience.",
                 biteorder:
                     "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
-            },
-        },
-        recommendations: {
-            title: "TESTIMONIALS",
-            subtitle: "What People Say",
-            items: {
-                victor: "A dedicated and creative developer. Always delivers quality projects.",
-                genesio: "Excellent professional, with great ability to solve complex problems in a simple way.",
-                edlaine: "Working with Alcino was an incredible experience. His code is clean and his ideas innovative.",
             },
         },
         experience: {
@@ -143,7 +162,8 @@ const translations = {
             description:
                 "Desenvolvedor de software dedicado a projetar e implementar soluções digitais escaláveis, combinando arquitetura sólida, alta performance e impacto mensurável nos negócios.",
             viewProjects: "Ver Projetos",
-            recommendations: "Recomendações",
+            statProjects: "Projetos em destaque",
+            statStack: "Stack e ferramentas",
         },
         skills: {
             title: "COMPETÊNCIAS",
@@ -173,15 +193,6 @@ const translations = {
                     "Website oficial do Restaurante Alquimia, um fine-dining no coração da Baixa de Luanda, Angola. O site apresenta identidade, menu, serviços, galeria e fluxo de reservas em uma experiência de página única.",
                 biteorder:
                     "Website responsivo de pedidos online com destaques de menu, navegação fluida e checkout simples.",
-            },
-        },
-        recommendations: {
-            title: "TESTEMUNHOS",
-            subtitle: "O Que Dizem",
-            items: {
-                victor: "Um desenvolvedor dedicado e criativo. Sempre entrega projetos de qualidade.",
-                genesio: "Excelente profissional, com grande capacidade de resolver problemas complexos de forma simples.",
-                edlaine: "Trabalhar com Alcino foi uma experiência incrível. Seu código é limpo e suas ideias inovadoras.",
             },
         },
         experience: {

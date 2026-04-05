@@ -1,5 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Mail, Linkedin, Github } from "lucide-react";
+import ScrollReveal from "@/components/motion/ScrollReveal";
+import MagneticLink from "@/components/motion/MagneticLink";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -10,7 +12,7 @@ export default function Contact() {
     {
       icon: (
         <svg
-          className="w-5 h-5 text-foreground group-hover:text-primary transition-colors"
+          className="w-5 h-5 text-foreground transition-colors group-hover:text-primary"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -25,7 +27,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="slide-up mb-12">
+        <ScrollReveal className="mb-12">
           <p className="text-primary font-poppins font-semibold text-sm mb-2">
             {t("contact.title")}
           </p>
@@ -35,16 +37,17 @@ export default function Contact() {
           <p className="text-muted-foreground font-roboto text-lg max-w-2xl mx-auto">
             {t("contact.description")}
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="flex flex-col items-center gap-8 slide-up" style={{ animationDelay: "100ms" }}>
-          <a
+        <ScrollReveal className="flex flex-col items-center gap-8" delayMs={90}>
+          <MagneticLink
             href="mailto:alcinoluvualo@gmail.com"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-poppins font-semibold hover:bg-primary/90 hover:scale-105 transition-all shadow-lg hover:shadow-primary/50"
+            strength={0.18}
+            className="inline-flex items-center gap-3 rounded-lg bg-primary px-8 py-4 font-poppins font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-shadow duration-300 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/40"
           >
-            <Mail className="w-5 h-5" />
+            <Mail className="h-5 w-5 shrink-0" />
             alcinoluvualo@gmail.com
-          </a>
+          </MagneticLink>
 
           <div className="flex gap-6">
             {socials.map((social, index) => (
@@ -53,14 +56,14 @@ export default function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group p-4 bg-card border border-border rounded-lg hover:border-primary hover:bg-primary/10 hover:scale-110 transition-all"
+                className="group rounded-lg border border-border bg-card p-4 transition-all duration-300 hover:translate-y-[-3px] hover:border-primary hover:bg-primary/10 hover:shadow-md hover:shadow-primary/10"
                 aria-label={social.label}
               >
                 {social.icon}
               </a>
             ))}
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
