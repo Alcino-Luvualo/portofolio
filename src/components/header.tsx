@@ -24,11 +24,6 @@ export default function Header({
       href: "#certifications",
     },
     { label: t("nav.projects"), id: "projects", href: "#projects" },
-    {
-      label: t("nav.recommendations"),
-      id: "recommendations",
-      href: "#recommendations",
-    },
     { label: t("nav.experience"), id: "experience", href: "#experience" },
     { label: t("nav.contact"), id: "contact", href: "#contact" },
   ];
