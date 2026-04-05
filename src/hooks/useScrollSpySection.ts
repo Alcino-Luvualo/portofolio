@@ -6,7 +6,6 @@ const SECTION_IDS = [
   "skills",
   "certifications",
   "projects",
-  "recommendations",
   "experience",
   "contact",
 ] as const;
