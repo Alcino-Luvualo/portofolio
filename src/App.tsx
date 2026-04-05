@@ -7,7 +7,6 @@ import Hero from "@/components/hero";
 import Skills from "@/components/skills";
 import CertificationsSection from "@/components/Certifications/CertificationsSection";
 import Projects from "@/components/projects";
-import Recommendations from "@/components/recommendations";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
@@ -38,7 +37,6 @@ function AppShell({
         <Skills />
         <CertificationsSection />
         <Projects />
-        <Recommendations />
         <Experience />
         <Contact />
         <Footer />
