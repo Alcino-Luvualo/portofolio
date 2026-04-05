@@ -115,7 +115,7 @@ export default function Hero() {
                 </svg>
               </a>
             </div>
-            <div className="flex flex-wrap gap-4 pt-2">
+            {/*<div className="flex flex-wrap gap-4 pt-2">
               <MagneticLink
                 href="#projects"
                 strength={0.2}
@@ -123,7 +123,7 @@ export default function Hero() {
               >
                 {t("hero.viewProjects")}
               </MagneticLink>
-            </div>
+            </div>*/}
           </div>
 
           <div className="hero-image-col flex justify-center md:justify-end">
