@@ -123,13 +123,6 @@ export default function Hero() {
               >
                 {t("hero.viewProjects")}
               </MagneticLink>
-              <MagneticLink
-                href="#recommendations"
-                strength={0.18}
-                className="rounded-lg border border-primary px-8 py-3 font-poppins font-semibold text-primary hover:bg-primary/10"
-              >
-                {t("hero.recommendations")}
-              </MagneticLink>
             </div>
           </div>
 
