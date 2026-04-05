@@ -31,36 +31,24 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="hero-stagger flex flex-col gap-6">
-            <div className="flex items-start justify-between gap-4">
-              <div className="min-w-0">
-                <p className="mb-2 font-poppins text-sm font-semibold text-primary">
-                  {t("hero.welcome")}
-                </p>
-                <h1 className="mb-2 font-poppins text-5xl font-bold text-foreground sm:text-6xl">
-                  <Typewriter
-                    onInit={(typewriter) => {
-                      typewriter.typeString("Alcino Luvualo").start();
-                    }}
-                    options={{
-                      autoStart: true,
-                      loop: false,
-                    }}
-                  />
-                </h1>
-                <h2 className="font-poppins text-3xl font-bold text-accent sm:text-4xl">
-                  {t("hero.role")}
-                </h2>
-              </div>
-              <div className="mt-1 shrink-0 md:hidden">
-                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-primary/40 bg-linear-to-br from-primary/20 to-accent/20 shadow-[0_0_24px_-8px_color-mix(in_oklch,var(--primary)_35%,transparent)]">
-                  <img
-                    src="professional.webp"
-                    alt="Alcino Luvualo"
-                    className="hero-photo-breathe absolute inset-0 h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+            <div>
+              <p className="mb-2 font-poppins text-sm font-semibold text-primary">
+                {t("hero.welcome")}
+              </p>
+              <h1 className="mb-2 font-poppins text-5xl font-bold text-foreground sm:text-6xl">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter.typeString("Alcino Luvualo").start();
+                  }}
+                  options={{
+                    autoStart: true,
+                    loop: false,
+                  }}
+                />
+              </h1>
+              <h2 className="font-poppins text-3xl font-bold text-accent sm:text-4xl">
+                {t("hero.role")}
+              </h2>
             </div>
             <p className="font-roboto text-xl leading-relaxed text-justify text-muted-foreground">
               {t("hero.description")}
@@ -138,7 +126,7 @@ export default function Hero() {
             </div>*/}
           </div>
 
-          <div className="hero-image-col hidden justify-center md:flex md:justify-end">
+          <div className="hero-image-col flex justify-center md:justify-end">
             <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-primary/30 bg-linear-to-br from-primary/20 to-accent/20 shadow-[0_0_60px_-12px_color-mix(in_oklch,var(--primary)_35%,transparent)] sm:h-[22rem] sm:w-[22rem]">
               <img
                 src="professional.webp"
