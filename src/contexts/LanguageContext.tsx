@@ -80,7 +80,6 @@ const translations = {
             skills: "Skills",
             certifications: "Certifications",
             projects: "Projects",
-            recommendations: "Recommendations",
             experience: "Experience",
             contact: "Contact",
         },
@@ -90,7 +89,6 @@ const translations = {
             description:
                 "Software developer dedicated to designing and implementing scalable digital solutions, combining solid architecture, high performance, and measurable business impact.",
             viewProjects: "Projects",
-            recommendations: "Recommendations",
             statProjects: "Featured projects",
             statStack: "Stack & tools",
         },
@@ -124,15 +122,6 @@ const translations = {
                     "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
             },
         },
-        recommendations: {
-            title: "TESTIMONIALS",
-            subtitle: "What People Say",
-            items: {
-                victor: "A dedicated and creative developer. Always delivers quality projects.",
-                genesio: "Excellent professional, with great ability to solve complex problems in a simple way.",
-                edlaine: "Working with Alcino was an incredible experience. His code is clean and his ideas innovative.",
-            },
-        },
         experience: {
             title: "EXPERIENCE",
             subtitle: "Professional Journey",
@@ -164,7 +153,6 @@ const translations = {
             skills: "Habilidades",
             certifications: "Certificações",
             projects: "Projetos",
-            recommendations: "Recomendações",
             experience: "Experiência",
             contact: "Contato",
         },
@@ -174,7 +162,6 @@ const translations = {
             description:
                 "Desenvolvedor de software dedicado a projetar e implementar soluções digitais escaláveis, combinando arquitetura sólida, alta performance e impacto mensurável nos negócios.",
             viewProjects: "Ver Projetos",
-            recommendations: "Recomendações",
             statProjects: "Projetos em destaque",
             statStack: "Stack e ferramentas",
         },
@@ -206,15 +193,6 @@ const translations = {
                     "Website oficial do Restaurante Alquimia, um fine-dining no coração da Baixa de Luanda, Angola. O site apresenta identidade, menu, serviços, galeria e fluxo de reservas em uma experiência de página única.",
                 biteorder:
                     "Website responsivo de pedidos online com destaques de menu, navegação fluida e checkout simples.",
-            },
-        },
-        recommendations: {
-            title: "TESTEMUNHOS",
-            subtitle: "O Que Dizem",
-            items: {
-                victor: "Um desenvolvedor dedicado e criativo. Sempre entrega projetos de qualidade.",
-                genesio: "Excelente profissional, com grande capacidade de resolver problemas complexos de forma simples.",
-                edlaine: "Trabalhar com Alcino foi uma experiência incrível. Seu código é limpo e suas ideias inovadoras.",
             },
         },
         experience: {
