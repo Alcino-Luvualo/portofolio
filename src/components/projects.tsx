@@ -18,10 +18,10 @@ export default function Projects() {
       logo: "/projects/logo_angovenda.jpg",
     },
     {
-      title: "Alquimia",
-      description: t("projects.items.alquimia"),
+      title: "U-topico",
+      description: t("projects.items.uTopico"),
       link: "https://u-topico.vercel.app/",
-      logo: "/projects/alquimia.ico",
+      logo: "/projects/logo-utopico.png",
     },
     {
       title: "BiteOrder",
@@ -36,10 +36,10 @@ export default function Projects() {
       logo: "/projects/helpdesk.png",
     },
     {
-      title: "U-topico",
-      description: t("projects.items.uTopico"),
+      title: "Alquimia",
+      description: t("projects.items.alquimia"),
       link: "https://u-topico.vercel.app/",
-      logo: "/projects/logo-utopico.png",
+      logo: "/projects/alquimia.ico",
     },
   ];
 
