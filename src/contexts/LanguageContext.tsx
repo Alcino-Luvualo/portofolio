@@ -116,10 +116,16 @@ const translations = {
             items: {
                 helpdesk:
                     "RESTful API for a help desk ticketing platform with role-based access control for Administrators, Technicians, and Clients.",
+                helpdeskFrontend:
+                    "A modern, role-based help desk management system built with Angular 21 for managing technical support tickets, clients, technicians, and services.",
                 alquimia:
                     "Official website for Restaurante Alquimia, a fine-dining restaurant in the heart of Baixa de Luanda, Angola. The site presents the restaurant's identity, menu, services, gallery, and reservation flow in a polished single-page experience.",
                 biteorder:
                     "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
+                angovenda:
+                    "Refurbished electronics e-commerce frontend for Angola (smartphones, laptops, tablets). Built with React 18, TypeScript, Tailwind & Vite. Includes catalog, filters, cart, trade-in, and WhatsApp integration.",
+                uTopico:
+                    "Restaurant landing page for U.Tópico, a wine bar and contemporary tapas restaurant located in Setúbal, Portugal.",
             },
         },
         experience: {
@@ -189,10 +195,16 @@ const translations = {
             items: {
                 helpdesk:
                     "API RESTful para uma plataforma de help desk com controle de acesso por papéis para Administradores, Técnicos e Clientes.",
+                helpdeskFrontend:
+                    "Sistema moderno de gestão de help desk com controlo por papéis, desenvolvido com Angular 21 para gerir tickets de suporte técnico, clientes, técnicos e serviços.",
                 alquimia:
                     "Website oficial do Restaurante Alquimia, um fine-dining no coração da Baixa de Luanda, Angola. O site apresenta identidade, menu, serviços, galeria e fluxo de reservas em uma experiência de página única.",
                 biteorder:
                     "Website responsivo de pedidos online com destaques de menu, navegação fluida e checkout simples.",
+                angovenda:
+                    "Frontend de e-commerce de eletrónicos recondicionados para Angola (smartphones, laptops e tablets). Desenvolvido com React 18, TypeScript, Tailwind e Vite. Inclui catálogo, filtros, carrinho, trade-in e integração com WhatsApp.",
+                uTopico:
+                    "Landing page do restaurante U.Tópico, um wine bar e restaurante de tapas contemporâneas localizado em Setúbal, Portugal.",
             },
         },
         experience: {
