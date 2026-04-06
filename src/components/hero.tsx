@@ -1,6 +1,5 @@
 import Typewriter from "typewriter-effect";
 import { useLanguage } from "@/contexts/LanguageContext";
-import MagneticLink from "@/components/motion/MagneticLink";
 import CountUpStat from "@/components/motion/CountUpStat";
 
 export default function Hero() {
