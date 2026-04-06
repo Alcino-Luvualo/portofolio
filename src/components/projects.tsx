@@ -12,6 +12,12 @@ export default function Projects() {
       logo: "/projects/helpdesk.png",
     },
     {
+      title: "AngoVenda",
+      description: t("projects.items.angovenda"),
+      link: "https://angovenda.vercel.app/",
+      logo: "/projects/logo_angovenda.jpg",
+    },
+    {
       title: "Alquimia",
       description: t("projects.items.alquimia"),
       link: "https://u-topico.vercel.app/",
@@ -22,6 +28,18 @@ export default function Projects() {
       description: t("projects.items.biteorder"),
       link: "https://biteorder.netlify.app/",
       logo: "/projects/biteorder.svg",
+    },
+    {
+      title: "Helpdesk Frontend",
+      description: t("projects.items.helpdeskFrontend"),
+      link: "https://helpdesk-t.vercel.app/login",
+      logo: "/projects/helpdesk.png",
+    },
+    {
+      title: "U-topico",
+      description: t("projects.items.uTopico"),
+      link: "https://u-topico.vercel.app/",
+      logo: "/projects/logo-utopico.png",
     },
   ];
 
