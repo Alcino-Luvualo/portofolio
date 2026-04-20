@@ -128,7 +128,7 @@ export default function Hero() {
           <div className="hero-image-col flex justify-center md:justify-end">
             <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-primary/30 bg-linear-to-br from-primary/20 to-accent/20 shadow-[0_0_60px_-12px_color-mix(in_oklch,var(--primary)_35%,transparent)] sm:h-[22rem] sm:w-[22rem]">
               <img
-                src="professional.webp"
+                src="Professional.avif"
                 alt="Alcino Luvualo"
                 className="hero-photo-breathe absolute inset-0 h-full w-full object-cover"
                 loading="lazy"

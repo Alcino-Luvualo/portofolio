@@ -12,6 +12,7 @@ export default function Header({
   setActiveSection,
 }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const scrollPosition = useRef(0);
 
@@ -36,6 +37,14 @@ export default function Header({
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "pt" : "en");
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const body = document.body;
@@ -82,11 +91,23 @@ export default function Header({
   }, [isMenuOpen]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className={`fixed top-0 left-0 right-0 z-50 px-4 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${!isScrolled ? 'border-b border-border' : ''}`}
+      style={{
+        paddingTop: isScrolled ? '0.75rem' : '0',
+      }}
+    >
       <nav
-        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between ${
+        className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isMenuOpen ? "relative z-[70]" : ""
         }`}
+        style={{
+          height: isScrolled ? '4rem' : '5rem',
+          backdropFilter: 'blur(24px) saturate(1.8)',
+          WebkitBackdropFilter: 'blur(24px) saturate(1.8)',
+          backgroundColor: 'rgba(8, 7, 15, 0.6)',
+          borderRadius: isScrolled ? '1rem' : '0',
+          border: isScrolled ? '1px solid rgba(255, 255, 255, 0.1)' : 'none',
+        }}
       >
         <div className="flex items-center gap-2">
           <img
@@ -107,7 +128,7 @@ export default function Header({
                 key={item.id}
                 href={item.href}
                 onClick={() => handleNavClick(item.id)}
-                className={`group relative pb-1 text-sm font-medium transition-colors ${
+                className={`group relative text-sm font-medium transition-colors duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                   active
                     ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
@@ -115,7 +136,7 @@ export default function Header({
               >
                 <span className="relative z-10">{item.label}</span>
                 <span
-                  className={`absolute bottom-0 left-0 h-0.5 w-full origin-left rounded-full bg-primary transition-transform duration-300 ease-out ${
+                  className={`absolute -bottom-1 left-0 h-[2px] w-full origin-left rounded-full bg-primary transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                     active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   }`}
                   aria-hidden
