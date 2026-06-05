@@ -6,8 +6,20 @@ export default function Projects() {
 
   const projectsData = [
     {
-      title: "HelpDesk Backend",
-      description: t("projects.items.helpdesk"),
+      title: "Flowly",
+      description: t("projects.items.flowly"),
+      link: "https://flowly.duckdns.org/",
+      logo: "https://flowly.duckdns.org/logo.png",
+    },
+    {
+      title: "Kaairo",
+      description: t("projects.items.kaairo"),
+      link: "https://kaairo.duckdns.org/",
+      logo: "https://kaairo.duckdns.org/logo.png",
+    },
+    {
+      title: "HelpDesk RestFull API",
+      description: t("projects.items.helpdeskBackend"),
       link: "https://github.com/Alcino-Luvualo/HelpDesk-Backend",
       logo: "/projects/helpdesk.png",
     },
@@ -18,28 +30,16 @@ export default function Projects() {
       logo: "/projects/logo_angovenda.jpg",
     },
     {
-      title: "U-topico",
-      description: t("projects.items.uTopico"),
-      link: "https://u-topico.vercel.app/",
-      logo: "/projects/logo-utopico.png",
+      title: "Lulu's Grill",
+      description: t("projects.items.lulusGrill"),
+      link: "https://lulusgrill.vercel.app/",
+      logo: "https://lulusgrill.vercel.app/favicon.svg",
     },
     {
-      title: "BiteOrder",
-      description: t("projects.items.biteorder"),
-      link: "https://biteorder.netlify.app/",
-      logo: "/projects/biteorder.svg",
-    },
-    {
-      title: "Helpdesk Frontend",
-      description: t("projects.items.helpdeskFrontend"),
-      link: "https://helpdesk-t.vercel.app/login",
-      logo: "/projects/helpdesk.png",
-    },
-    {
-      title: "Alquimia",
-      description: t("projects.items.alquimia"),
-      link: "https://u-topico.vercel.app/",
-      logo: "/projects/alquimia.ico",
+      title: "Gosto Superior",
+      description: t("projects.items.gostoSuperior"),
+      link: "https://gostosuperior.vercel.app/",
+      logo: "https://gostosuperior.vercel.app/favicon.svg",
     },
   ];
 

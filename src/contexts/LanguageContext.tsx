@@ -114,18 +114,18 @@ const translations = {
             viewProject: "View Project",
             viewCode: "View Code",
             items: {
-                helpdesk:
-                    "RESTful API for a help desk ticketing platform with role-based access control for Administrators, Technicians, and Clients.",
-                helpdeskFrontend:
-                    "A modern, role-based help desk management system built with Angular 21 for managing technical support tickets, clients, technicians, and services.",
-                alquimia:
-                    "Official website for Restaurante Alquimia, a fine-dining restaurant in the heart of Baixa de Luanda, Angola. The site presents the restaurant's identity, menu, services, gallery, and reservation flow in a polished single-page experience.",
-                biteorder:
-                    "Responsive online ordering website with menu highlights, smooth browsing, and a simple checkout flow.",
+                flowly:
+                    "Flowly is an operational fullstack Kanban for teams, with workspaces, boards, RBAC in three levels, comments, attachments, labels, checklists and real-time updates, developed with NestJS, Angular and PostgreSQL.",
+                helpdeskBackend:
+                    "Backend de HelpDesk em Node.js (AdonisJS + PostgreSQL) com autenticação JWT, papéis (Admin, Técnico, Cliente), gestão de tickets/serviços e upload de imagens via Cloudinary, com deploy na Render.",
+                lulusGrill:
+                    "Official website for Lulus Grill, a grill restaurant in Luanda, Angola. The site showcases brand identity, menu, services, gallery, and a reservation flow in a single-page experience.",
+                kaairo:
+                    "Kaairo is a gamified Productivity OS built with NestJS, PostgreSQL, and Next.js, featuring web push notifications, streak tracking, productivity heatmaps, and an XP system to keep daily routines engaging.",
                 angovenda:
-                    "Refurbished electronics e-commerce frontend for Angola (smartphones, laptops, tablets). Built with React 18, TypeScript, Tailwind & Vite. Includes catalog, filters, cart, trade-in, and WhatsApp integration.",
-                uTopico:
-                    "Restaurant landing page for U.Tópico, a wine bar and contemporary tapas restaurant located in Setúbal, Portugal.",
+                    "E-commerce frontend for refurbished electronics in Angola (smartphones, laptops, and tablets). Built with React 18, TypeScript, Tailwind, and Vite. Includes catalog, filters, cart, trade-in, and WhatsApp integration.",
+                gostoSuperior:
+                    "Modern, responsive website for Gosto Superior, a vegetarian restaurant in Braga. I structured the site into clear sections (services, menu, about, testimonials, and contact), with a focus on usability, performance, and highlighting online reservations and delivery.",
             },
         },
         experience: {
@@ -193,18 +193,18 @@ const translations = {
             viewProject: "Ver Projeto",
             viewCode: "Ver Código",
             items: {
-                helpdesk:
-                    "API RESTful para uma plataforma de help desk com controle de acesso por papéis para Administradores, Técnicos e Clientes.",
-                helpdeskFrontend:
-                    "Sistema moderno de gestão de help desk com controlo por papéis, desenvolvido com Angular 21 para gerir tickets de suporte técnico, clientes, técnicos e serviços.",
-                alquimia:
-                    "Website oficial do Restaurante Alquimia, um fine-dining no coração da Baixa de Luanda, Angola. O site apresenta identidade, menu, serviços, galeria e fluxo de reservas em uma experiência de página única.",
-                biteorder:
-                    "Website responsivo de pedidos online com destaques de menu, navegação fluida e checkout simples.",
+                flowly:
+                    "Flowly é um Kanban operacional fullstack para equipas, com workspaces, boards, RBAC em três níveis, comentários, anexos, labels, checklists e atualizações em tempo real, desenvolvido com NestJS, Angular e PostgreSQL.",
+                helpdeskBackend:
+                    "Backend de HelpDesk em Node.js (AdonisJS + PostgreSQL) com autenticação JWT, papéis (Admin, Técnico, Cliente), gestão de tickets/serviços e upload de imagens via Cloudinary, com deploy na Render.",
+                lulusGrill:
+                    "Website oficial do Restaurante Lulus Grill, um restaurante de grelhados em Luanda, Angola. O site apresenta identidade, menu, serviços, galeria e fluxo de reservas em uma experiência de página única.",
+                kaairo:
+                    "Kaairo é um Productivity OS gamificado em NestJS, PostgreSQL e Next.js, com notificações web push, tracking de streaks, heatmap de produtividade e sistema de XP para engajar a rotina diária.",
                 angovenda:
                     "Frontend de e-commerce de eletrónicos recondicionados para Angola (smartphones, laptops e tablets). Desenvolvido com React 18, TypeScript, Tailwind e Vite. Inclui catálogo, filtros, carrinho, trade-in e integração com WhatsApp.",
-                uTopico:
-                    "Landing page do restaurante U.Tópico, um wine bar e restaurante de tapas contemporâneas localizado em Setúbal, Portugal.",
+                gostoSuperior:
+                    "Website moderno e responsivo para o restaurante vegetariano Gosto Superior, em Braga. Estruturei o site em seções claras (serviços, menu, sobre, testemunhos e contacto), com foco em usabilidade, performance e destaque para reservas online e delivery.",
             },
         },
         experience: {
