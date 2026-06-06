@@ -39,7 +39,7 @@ export default function Projects() {
       title: "Gosto Superior",
       description: t("projects.items.gostoSuperior"),
       link: "https://gostosuperior.vercel.app/",
-      logo: "https://gostosuperior.vercel.app/favicon.svg",
+      logo: "https://gosto-superior.vercel.app/favicon.svg",
     },
   ];
 
