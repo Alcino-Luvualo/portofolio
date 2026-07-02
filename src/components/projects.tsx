@@ -14,8 +14,8 @@ export default function Projects() {
     {
       title: "Kaairo",
       description: t("projects.items.kaairo"),
-      link: "https://kaairo.duckdns.org/",
-      logo: "https://kaairo.duckdns.org/logo.png",
+      link: "https://kaairo.app",
+      logo: "https://kaairo.app/logo.png",
     },
     {
       title: "HelpDesk RestFull API",
