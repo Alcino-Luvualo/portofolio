@@ -85,7 +85,7 @@ const translations = {
         },
         hero: {
             welcome: "WELCOME",
-            role: "Software Developer",
+            role: "Software Engineer",
             description:
                 "Software developer dedicated to designing and implementing scalable digital solutions, combining solid architecture, high performance, and measurable business impact.",
             viewProjects: "Projects",
@@ -164,7 +164,7 @@ const translations = {
         },
         hero: {
             welcome: "BEM-VINDO",
-            role: "Software Developer",
+            role: "Software Engineer",
             description:
                 "Desenvolvedor de software dedicado a projetar e implementar soluções digitais escaláveis, combinando arquitetura sólida, alta performance e impacto mensurável nos negócios.",
             viewProjects: "Ver Projetos",
