@@ -5,10 +5,10 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 
 const EXPERIENCES = [
   {
-    company: "ITGest",
-    role: "Software Developer",
+    company: "Grupo Ideias Dinâmicas",
+    role: "Software Engineer",
     period: "February 2026 - Present",
-    description: "experience.itgest.description",
+    description: "experience.grupoIdeiasDinamicas.description",
   },
   {
     company: "Ars Tecnologias, Lda",

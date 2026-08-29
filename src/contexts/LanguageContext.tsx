@@ -131,8 +131,8 @@ const translations = {
         experience: {
             title: "EXPERIENCE",
             subtitle: "Professional Journey",
-            itgest: {
-                description: "At ITGEST, I work as a Full Stack Developer, building and maintaining scalable web applications used by thousands of people every month, including critical systems for major telecommunications clients such as Angola Telecom and Movicel. I develop modern front-end interfaces using Angular and robust back-end systems using AdonisJS, supported by MySQL databases. I am responsible for designing and implementing RESTful APIs, optimizing application performance, and ensuring clean, maintainable code. I also work in an Agile environment, collaborating with cross-functional teams to deliver reliable, high-performance, and user-centric solutions.",
+            grupoIdeiasDinamicas: {
+                description: "At Grupo Ideias Dinâmicas, I contribute to enterprise telecommunications systems for organizations including Angola Telecom and Movicel, supporting services used by millions of people. I work across Angular and Node.js applications, databases, integrations, APIs, and production reliability. I automated AGT fiscal-document processing, reducing file upload and persistence failures by 23%, and improved database queries and build processes, reducing response times by 40%.",
             },
             ars: {
                 description: "I worked on the development of the Tuuri platform as a Front-End Developer, where I had the opportunity to deepen my knowledge of React.js, JavaScript (ES6+), Hooks, Context API, and Styled Components. During this period, I honed my UI/UX skills by developing responsive, intuitive, and accessible (WCAG) interfaces, as well as learning best practices in architecture for scalable systems. I also used Git/GitHub for code versioning and team collaboration, always focusing on performance, scalability, and delivering solutions that enhance the user experience.",
@@ -210,8 +210,8 @@ const translations = {
         experience: {
             title: "EXPERIÊNCIA",
             subtitle: "Jornada Profissional",
-            itgest: {
-                description: "Na ITGEST, trabalho como Desenvolvedor Full Stack, construindo e mantendo aplicações web escaláveis usadas por milhares de pessoas mensalmente, incluindo sistemas críticos para grandes clientes de telecomunicações como Angola Telecom e Movicel. Desenvolvo interfaces front-end modernas usando Angular e sistemas back-end robustos usando AdonisJS, suportados por bases de dados MySQL. Sou responsável por projetar e implementar APIs RESTful, otimizar o desempenho das aplicações e garantir código limpo e manutenível. Também trabalho em ambiente Ágil, colaborando com equipas multifuncionais para entregar soluções confiáveis, de alto desempenho e centradas no utilizador.",
+            grupoIdeiasDinamicas: {
+                description: "No Grupo Ideias Dinâmicas, contribuo para sistemas enterprise de telecomunicações de organizações como Angola Telecom e Movicel, que suportam serviços usados por milhões de pessoas. Atuo em aplicações Angular e Node.js, bases de dados, integrações, APIs e fiabilidade em produção. Automatizei o processamento de documentos fiscais da AGT, reduzindo em 23% as falhas no carregamento e persistência de ficheiros, e otimizei queries e processos de build, melhorando os tempos de resposta em 40%.",
             },
             ars: {
                 description: "Trabalhei no desenvolvimento da plataforma Tuuri como Desenvolvedor Front-End, onde tive a oportunidade de aprofundar meus conhecimentos em React.js, JavaScript (ES6+), Hooks, Context API e Styled Components. Durante este período, aprimorei minhas habilidades de UI/UX desenvolvendo interfaces responsivas, intuitivas e acessíveis (WCAG), além de aprender as melhores práticas em arquitetura para sistemas escaláveis. Também usei Git/GitHub para versionamento de código e colaboração em equipa, sempre focando em desempenho, escalabilidade e entrega de soluções que melhoram a experiência do utilizador.",
